@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1203984874604012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4869936102015258}
+  - component: {fileID: 114011363287563172}
+  m_Layer: 0
+  m_Name: Player3 Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4869936102015258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203984874604012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4661573557697492}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114011363287563172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203984874604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dac832ef62334bb2862b36e8811501a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Pete
+  playerLevel: 2
+  currentEXP: 363
+  maxLevel: 10
+  baseExp: 1000
+  currentHP: 0
+  maxHP: 150
+  currentMP: 0
+  maxMP: 25
+  strength: 18
+  defence: 115
+  weaponPower: 5
+  armorPower: 0
+  equippedWeapon: Wooden Sword
+  equippedArmor: 
+  charImage: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  expToNextLevel: 
+  mpLvlBonus: 
+--- !u!1 &1326628536202748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4138126434957466}
+  - component: {fileID: 114148293041524260}
+  m_Layer: 0
+  m_Name: Player2 Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4138126434957466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326628536202748}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4661573557697492}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114148293041524260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326628536202748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dac832ef62334bb2862b36e8811501a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Woody
+  playerLevel: 3
+  currentEXP: 543
+  maxLevel: 10
+  baseExp: 1000
+  currentHP: 0
+  maxHP: 150
+  currentMP: 0
+  maxMP: 25
+  strength: 20
+  defence: 18
+  weaponPower: 0
+  armorPower: 0
+  equippedWeapon: 
+  equippedArmor: 
+  charImage: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  expToNextLevel: 
+  mpLvlBonus: 
+--- !u!1 &1485824179386816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4636218500604076}
+  - component: {fileID: 114566367625458248}
+  m_Layer: 0
+  m_Name: Player1 Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4636218500604076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485824179386816}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4661573557697492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114566367625458248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485824179386816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dac832ef62334bb2862b36e8811501a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Tim
+  playerLevel: 1
+  currentEXP: 250
+  maxLevel: 10
+  baseExp: 1000
+  currentHP: 0
+  maxHP: 100
+  currentMP: 0
+  maxMP: 30
+  strength: 15
+  defence: 12
+  weaponPower: 0
+  armorPower: 0
+  equippedWeapon: 
+  equippedArmor: 
+  charImage: {fileID: 21300000, guid: c64282cd9829e4774a062bf55f1000cf, type: 3}
+  expToNextLevel: 
+  mpLvlBonus: 
+--- !u!1 &1791602419118572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4661573557697492}
+  - component: {fileID: 114080806334326734}
+  - component: {fileID: 2836009557687388987}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4661573557697492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791602419118572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4636218500604076}
+  - {fileID: 4138126434957466}
+  - {fileID: 4869936102015258}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114080806334326734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791602419118572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf372b53a2dd45898e5d6a450c5519c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats:
+  - {fileID: 114566367625458248}
+  - {fileID: 114148293041524260}
+  - {fileID: 114011363287563172}
+  gameMenuOpen: 0
+  dialogActive: 0
+  fadingBetweenAreas: 0
+  shopActive: 0
+  itemsHeld:
+  - Health Potion
+  - Mana Potion
+  - Iron Sword
+  - Wooden Sword
+  - Leather Armor
+  - 
+  - Iron Armor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  numberOfItems: 03000000050000000200000001000000010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  referenceItems:
+  - {fileID: 114712462709240714, guid: c736ddcf6e8bc4e8aade8143d90404fc, type: 3}
+  - {fileID: 114737460617299154, guid: 236edf5b90061435fab88ec713db8fc6, type: 3}
+  - {fileID: 114295278302214646, guid: 140a902b4655d45d491eeb3974d4a92c, type: 3}
+  - {fileID: 114739769966248286, guid: e58ea2df5f5d542ca9271b19bd13324a, type: 3}
+  - {fileID: 114292609429653436, guid: 09d3af810de894064bb0f11a496f1167, type: 3}
+  - {fileID: 114980843778403524, guid: 48f46c31739934aac9a902868257099c, type: 3}
+  currentGold: 100
+--- !u!114 &2836009557687388987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791602419118572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b806b5cfee24e9da24a34b76fc90f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - Buy Health Potion
+  - Buy Mana Potion
+  - Buy Leather Armor
+  - Defeat Dragon
+  questMarkersComplete: 

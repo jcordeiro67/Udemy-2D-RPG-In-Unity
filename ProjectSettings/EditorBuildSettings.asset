@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeIsland.unity
+    guid: eb61dab5ab4fa4d48a5362a6e4c43878
+  - enabled: 1
+    path: Assets/Scenes/GrassLand.unity
+    guid: 4c81f7ad3216247888517b3ba16e8e1f
+  - enabled: 1
+    path: Assets/Scenes/ShopInterior.unity
+    guid: f790601ba35a4480495ccfac488f8a5f
+  - enabled: 1
+    path: Assets/Scenes/CountrySide.unity
+    guid: 25b3c646c3d4c4a0a912e8ccf9408d60
+  - enabled: 1
+    path: Assets/Scenes/CaveInterior.unity
+    guid: f8b43f113cd204ee18c8bb83caa2ede1
+  - enabled: 1
+    path: Assets/Scenes/TownSquare.unity
+    guid: 94247e78bb8484c529e46a7a13914402
+  m_configObjects: {}
