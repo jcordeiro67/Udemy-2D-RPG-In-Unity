@@ -11,6 +11,7 @@ public class PickUpItem : MonoBehaviour {
 	private Item item;
 
 
+
     // Start is called before the first frame update
     void Start() {
 		item = GetComponent<Item>();

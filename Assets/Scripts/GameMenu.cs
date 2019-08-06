@@ -10,6 +10,7 @@ public class GameMenu : MonoBehaviour {
 	public GameObject[] windows;
 	public int openWindowSound;
 	public int closeWindowSound;
+	public int buttonClickSound;
 
 	[Header("Stats UI Components")]
 	public Text[] nameText;
@@ -232,6 +233,11 @@ public class GameMenu : MonoBehaviour {
 
 		GameManager.instance.LoadGameData();
 		QuestManager.instance.LoadQuestData();
+	}
+
+	public void PlayButtonClick() {
+
+		AudioManager.instance.PlaySFX(buttonClickSound);
 	}
 	//Show Equipped item using activeItem and isWeapon
 }

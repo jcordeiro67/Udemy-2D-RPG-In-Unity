@@ -47,3 +47,5 @@ MonoBehaviour:
     type: 3}
   UICanvas: {fileID: 6714127895798717906, guid: 6fbe55ba37531446d85a4c6c44f1d1da,
     type: 3}
+  audioManager: {fileID: 4284300712234274286, guid: 7099a341508d743a18259b29af20a789,
+    type: 3}

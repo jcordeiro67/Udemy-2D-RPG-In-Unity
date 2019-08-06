@@ -6,6 +6,7 @@ public class EssentialsLoader : MonoBehaviour {
 
 	public GameObject gameManager;
 	public GameObject UICanvas;
+	public GameObject audioManager;
 
 	void Start() {
 		if (UIFade.instance == null) {
@@ -14,6 +15,10 @@ public class EssentialsLoader : MonoBehaviour {
 
 		if (GameManager.instance == null) {
 			Instantiate(gameManager);
+		}
+
+		if (AudioManager.instance == null) {
+			Instantiate(audioManager);
 		}
 
 		DontDestroyOnLoad(gameObject);
