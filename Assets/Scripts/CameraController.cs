@@ -17,8 +17,10 @@ public class CameraController : MonoBehaviour {
 	private Vector3 bottomLeftLimit, topRightLimit;
 	private float halfHeight, halfWidth;
 
+
 	// Use this for initialization
 	void Start () {
+
 		if (!target) {
 			target = PlayerController.instance.transform;
 		}
@@ -37,11 +39,15 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+		if (target != null) {
+			transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+		}
 
 		// Keep the camera inside the bounds
-		transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
-			Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+		if (tileMap != null) {
+			transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
+				Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+		}
 
 		if (!musicStarted) {
 			musicStarted = true;

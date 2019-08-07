@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class GameMenu : MonoBehaviour {
 	public int openWindowSound;
 	public int closeWindowSound;
 	public int buttonClickSound;
+	public string mainMenuScene;
 
 	[Header("Stats UI Components")]
 	public Text[] nameText;
@@ -240,4 +242,20 @@ public class GameMenu : MonoBehaviour {
 		AudioManager.instance.PlaySFX(buttonClickSound);
 	}
 	//Show Equipped item using activeItem and isWeapon
+
+	public void QuitGame() {
+		GameManager.instance.SaveGameData();
+		QuestManager.instance.SaveQuestData();
+
+		SceneManager.LoadScene(mainMenuScene);
+
+		Destroy(GameManager.instance.gameObject);
+		GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>().target = null;
+		GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>().tileMap = null;
+		Destroy(PlayerController.instance.gameObject);
+		Destroy(AudioManager.instance.gameObject);
+		Destroy(gameObject); 
+
+	}
+
 }
