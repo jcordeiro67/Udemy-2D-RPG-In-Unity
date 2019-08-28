@@ -48,14 +48,14 @@ MonoBehaviour:
   currentEXP: 363
   maxLevel: 10
   baseExp: 1000
-  currentHP: 0
+  currentHP: 60
   maxHP: 150
-  currentMP: 0
+  currentMP: 5
   maxMP: 25
   strength: 18
   defence: 115
   weaponPower: 5
-  armorPower: 0
+  armorPower: 2
   equippedWeapon: Wooden Sword
   equippedArmor: 
   charImage: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
@@ -109,14 +109,14 @@ MonoBehaviour:
   currentEXP: 543
   maxLevel: 10
   baseExp: 1000
-  currentHP: 0
+  currentHP: 100
   maxHP: 150
-  currentMP: 0
+  currentMP: 5
   maxMP: 25
   strength: 20
   defence: 18
-  weaponPower: 0
-  armorPower: 0
+  weaponPower: 2
+  armorPower: 2
   equippedWeapon: 
   equippedArmor: 
   charImage: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
@@ -170,14 +170,14 @@ MonoBehaviour:
   currentEXP: 250
   maxLevel: 10
   baseExp: 1000
-  currentHP: 0
+  currentHP: 60
   maxHP: 100
-  currentMP: 0
-  maxMP: 30
+  currentMP: 20
+  maxMP: 100
   strength: 15
   defence: 12
-  weaponPower: 0
-  armorPower: 0
+  weaponPower: 1
+  armorPower: 1
   equippedWeapon: 
   equippedArmor: 
   charImage: {fileID: 21300000, guid: c64282cd9829e4774a062bf55f1000cf, type: 3}
@@ -288,6 +288,7 @@ MonoBehaviour:
   - {fileID: 114292609429653436, guid: 09d3af810de894064bb0f11a496f1167, type: 3}
   - {fileID: 114980843778403524, guid: 48f46c31739934aac9a902868257099c, type: 3}
   currentGold: 100
+  loadData: 0
 --- !u!114 &2836009557687388987
 MonoBehaviour:
   m_ObjectHideFlags: 0
