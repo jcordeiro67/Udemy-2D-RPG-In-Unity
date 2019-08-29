@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6087712343746112386}
   - component: {fileID: 3253441686640266001}
   m_Layer: 0
-  m_Name: Enemy_Troll
+  m_Name: Enemy_Wizzard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: -1059088119
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_Sprite: {fileID: 21300012, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,16 +93,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  charName: Troll
+  charName: Wizzard
   movesAvailiable:
-  - Slash
+  - Ice
   - Fire
-  currentHP: 50
+  currentHP: 70
   maxHP: 100
-  currentMP: 0
-  maxMP: 0
-  strength: 3
-  defence: 2
-  wpnPower: 2
-  armrPower: 2
+  currentMP: 10
+  maxMP: 100
+  strength: 5
+  defence: 4
+  wpnPower: 3
+  armrPower: 3
   hasDied: 0
