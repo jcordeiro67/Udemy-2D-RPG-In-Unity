@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour {
 
@@ -21,6 +22,13 @@ public class BattleManager : MonoBehaviour {
 	public GameObject enemyAttackEffect;
 	public GameObject uiButtonsHolder;
 	public BattleMove[] movesList;
+	public DamageDisplay damageUI;
+	public GameObject targetMenuUI;
+	public BattleTargetButton[] targetButtons;
+	public GameObject magicMenuUI;
+	public MagicButton[] magicButtons;
+
+	public Text[] playerNames, playerHP, playerMP;
 	private bool battleActive;
 
     // Start is called before the first frame update
@@ -34,6 +42,7 @@ public class BattleManager : MonoBehaviour {
 		
 		//TESTING AREA
 		if (Input.GetKeyDown(KeyCode.T)) {
+			print("Key Pressed"); 
 			BattleStart(new string[] {"Troll", "Skeleton", "Wizzard", "Skeleton", "Spider", "Wizzard"} );
 		}
 
@@ -126,6 +135,7 @@ public class BattleManager : MonoBehaviour {
 		turnWaiting = true;
 		//To force player first in battle set currentTurn to 0.
 		currentTrun = Random.Range(0, activeBattlers.Count);
+		UpdateUIStats();
 		battleActive = true;
 	}
 
@@ -139,6 +149,7 @@ public class BattleManager : MonoBehaviour {
 
 		turnWaiting = true;
 		UpdateBattle();
+		UpdateUIStats();
 	}
 
 	public void UpdateBattle() {
@@ -177,6 +188,16 @@ public class BattleManager : MonoBehaviour {
 			battleScene.SetActive(false);
 			GameManager.instance.battleActive = false;
 			battleActive = false;
+
+		} else {
+			
+			while (activeBattlers[currentTrun].currentHP == 0) {
+				currentTrun++;
+
+				if (currentTrun >= activeBattlers.Count) {
+					currentTrun = 0;
+				}
+			}
 		}
 	}
 
@@ -207,10 +228,10 @@ public class BattleManager : MonoBehaviour {
 
 		//Select random player to attack
 		int selectedTarget = players[Random.Range(0, players.Count)];
-		int movePower = 0;
-
 		//Select which move of availaible move list to use for attack
 		int selectAttack = Random.Range(0, activeBattlers[currentTrun].movesAvailiable.Length);
+
+		int movePower = 0;
 		//find correct attact from movesAvailiable list
 		for (int i = 0; i < movesList.Length; i++) {
 			if (movesList[i].moveName == activeBattlers[currentTrun].movesAvailiable[selectAttack]) {
@@ -236,5 +257,103 @@ public class BattleManager : MonoBehaviour {
 		//Debug.Log(activeBattlers[currentTrun].charName + " is dealing " + damageCalc + "(" + damageToGive + ") damage to " + activeBattlers[target].charName);
 		//Deduct damageToGive from target
 		activeBattlers[target].currentHP -= damageToGive;
+
+		Instantiate(damageUI, activeBattlers[target].transform.position, activeBattlers[target].transform.rotation).SetDamageText(damageToGive);
+		UpdateUIStats();
+	}
+
+	public void UpdateUIStats() {
+
+		for (int i = 0; i < playerNames.Length; i++) {
+			if (activeBattlers.Count > 1) {
+				if (activeBattlers[i].isPlayer) {
+					
+					BattleChar playerData = activeBattlers[i];
+
+					playerNames[i].gameObject.SetActive(true);
+					playerNames[i].text = playerData.charName;
+					playerHP[i].text = Mathf.Clamp(playerData.currentHP, 0, int.MaxValue) + "/" + playerData.maxHP;
+					playerMP[i].text = Mathf.Clamp(playerData.currentMP, 0, int.MaxValue) + "/" + playerData.maxMP;
+
+				} else {
+					
+					playerNames[i].gameObject.SetActive(false);
+				}
+			} else {
+				playerNames[i].gameObject.SetActive(false);
+			}
+		}
+	}
+
+	public void PlayerAttack(string moveName , int selectedTarget) {
+		
+		int movePower = 0;
+		//find correct attact from movesAvailiable list
+		for (int i = 0; i < movesList.Length; i++) {
+			if (movesList[i].moveName == moveName) {
+				Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
+				movePower = movesList[i].movePower;
+			}
+		}
+
+		//Instantiate(damageUI, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation).SetDamageText(movePower);
+		//Display Enemy Attack Effect
+		if (enemyAttackEffect != null) {
+			Instantiate(enemyAttackEffect, activeBattlers[currentTrun].transform.position, activeBattlers[currentTrun].transform.rotation);
+		}
+		DealDamage(selectedTarget, movePower);
+
+		uiButtonsHolder.SetActive(false);
+		targetMenuUI.SetActive(false);
+		NextTurn();
+	}
+
+	public void OpenTargetMenu(string moveName) {
+		//Open Menu
+		targetMenuUI.SetActive(true);
+		//Create Enemies List
+		List<int> Enemies = new List<int>();
+		for (int i = 0; i < activeBattlers.Count; i++) {
+			if (!activeBattlers[i].isPlayer) {
+				Enemies.Add(i);
+
+			}
+		}
+		//Set Target Button for Enemies
+		for (int i = 0; i < targetButtons.Length; i++) {
+			if (Enemies.Count > i) {
+				targetButtons[i].gameObject.SetActive(true);
+				targetButtons[i].moveName = moveName;
+				targetButtons[i].activeBattlerTarget = Enemies[i];
+				targetButtons[i].targetName.text = activeBattlers[Enemies[i]].charName;
+
+
+			} else {
+				targetButtons[i].gameObject.SetActive(false);
+			}
+		}
+	}
+
+	public void OpenMagicMenu() {
+
+		magicMenuUI.SetActive(true);
+		for (int i = 0; i < magicButtons.Length; i++) {
+			if (activeBattlers[currentTrun].movesAvailiable.Length > i) {
+				magicButtons[i].gameObject.SetActive(true);
+
+				magicButtons[i].spellName = activeBattlers[currentTrun].movesAvailiable[i];
+				magicButtons[i].spellText.text = magicButtons[i].spellName;
+
+				for (int j = 0; j < movesList.Length; j++) {
+					if (movesList[j].moveName == magicButtons[i].spellName) {
+						magicButtons[i].spellCost = movesList[j].moveCost;
+						magicButtons[i].costText.text = magicButtons[i].spellCost.ToString();
+					}
+				}
+
+			} else {
+				magicButtons[i].gameObject.SetActive(false);
+			}
+		}
 	}
 }
