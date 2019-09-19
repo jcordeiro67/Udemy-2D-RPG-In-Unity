@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//stop player from moving if one of the menus or dialogs are open
 		if (gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive) {
 			PlayerController.instance.canMove = false;
 		}else {
@@ -51,22 +51,6 @@ public class GameManager : MonoBehaviour {
 			loadData = false;
 		}
 
-		//TESTING KEYS
-		if (Input.GetKeyDown(KeyCode.J)) {
-			AddItem("Iron Armor");
-			AddItem("Blabla");
-
-			RemoveItems("Health Potion");
-		}
-
-		if (Input.GetKeyDown(KeyCode.O)) {
-			SaveGameData();
-		}
-
-		if (Input.GetKeyDown(KeyCode.P)) {
-			LoadGameData();
-		}
-		//END TESTING
 	}
 
 	/// <summary>
@@ -152,7 +136,7 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="itemToRemove">Item to remove.</param>
 	public void RemoveItems(string itemToRemove) {
-		//print("Removing Item"); 
+		
 		bool foundItem = false;
 
 		int itemPosition = 0;

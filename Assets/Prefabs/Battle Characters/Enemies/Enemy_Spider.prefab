@@ -97,12 +97,18 @@ MonoBehaviour:
   movesAvailiable:
   - Plasma
   - Slash
-  currentHP: 30
-  maxHP: 100
+  currentHP: 300
+  maxHP: 1000
   currentMP: 2
   maxMP: 50
-  strength: 2
-  defence: 2
-  wpnPower: 1
-  armrPower: 1
+  strength: 3
+  defence: 3
+  wpnPower: 2
+  armrPower: 3
   hasDied: 0
+  shouldFade: 0
+  fadeSpeed: 0.5
+  fadeColor: {r: 1, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
+  aliveSprite: {fileID: 0}
+  deadSprite: {fileID: 0}

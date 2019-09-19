@@ -97,12 +97,18 @@ MonoBehaviour:
   movesAvailiable:
   - Slash
   - Fire
-  currentHP: 50
-  maxHP: 100
+  currentHP: 200
+  maxHP: 1000
   currentMP: 0
   maxMP: 0
   strength: 3
-  defence: 2
+  defence: 4
   wpnPower: 2
   armrPower: 2
   hasDied: 0
+  shouldFade: 0
+  fadeSpeed: 0.5
+  fadeColor: {r: 1, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
+  aliveSprite: {fileID: 0}
+  deadSprite: {fileID: 0}

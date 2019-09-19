@@ -97,12 +97,18 @@ MonoBehaviour:
   movesAvailiable:
   - Ice
   - Plasma
-  currentHP: 80
-  maxHP: 100
-  currentMP: 20
+  currentHP: 300
+  maxHP: 300
+  currentMP: 100
   maxMP: 100
   strength: 2
   defence: 2
   wpnPower: 1
   armrPower: 2
   hasDied: 0
+  shouldFade: 0
+  fadeSpeed: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
+  aliveSprite: {fileID: 21300036, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  deadSprite: {fileID: 21300046, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}

@@ -30,6 +30,9 @@ public class MagicButton : MonoBehaviour {
 		} else {
 
 			//let player know they dont have enough MP
+			BattleManager.instance.battleNotice.messageText.text = "Not Enough MP!";
+			BattleManager.instance.battleNotice.Activate();
+			BattleManager.instance.magicMenuUI.SetActive(false);
 		}
 
 	}

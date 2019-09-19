@@ -36,6 +36,11 @@ public class ItemButton : MonoBehaviour {
 			}
 		}
 
+		if (BattleManager.instance.battleItemsMenu.activeInHierarchy) {
+			if (GameManager.instance.itemsHeld[buttonValue] != "") {
+				BattleManager.instance.SelectItemInBattle(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[buttonValue]));
+			}
+		}
 
 	}
 }

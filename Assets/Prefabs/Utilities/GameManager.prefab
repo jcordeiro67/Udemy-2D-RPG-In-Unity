@@ -48,12 +48,12 @@ MonoBehaviour:
   currentEXP: 363
   maxLevel: 10
   baseExp: 1000
-  currentHP: 60
+  currentHP: 120
   maxHP: 150
-  currentMP: 5
-  maxMP: 25
-  strength: 18
-  defence: 115
+  currentMP: 75
+  maxMP: 100
+  strength: 4
+  defence: 4
   weaponPower: 5
   armorPower: 2
   equippedWeapon: Wooden Sword
@@ -109,12 +109,12 @@ MonoBehaviour:
   currentEXP: 543
   maxLevel: 10
   baseExp: 1000
-  currentHP: 100
-  maxHP: 150
-  currentMP: 5
-  maxMP: 25
-  strength: 20
-  defence: 18
+  currentHP: 300
+  maxHP: 300
+  currentMP: 150
+  maxMP: 300
+  strength: 12
+  defence: 14
   weaponPower: 2
   armorPower: 2
   equippedWeapon: 
@@ -170,12 +170,12 @@ MonoBehaviour:
   currentEXP: 250
   maxLevel: 10
   baseExp: 1000
-  currentHP: 60
-  maxHP: 100
-  currentMP: 20
+  currentHP: 200
+  maxHP: 200
+  currentMP: 100
   maxMP: 100
-  strength: 15
-  defence: 12
+  strength: 8
+  defence: 10
   weaponPower: 1
   armorPower: 1
   equippedWeapon: 
@@ -238,6 +238,7 @@ MonoBehaviour:
   dialogActive: 0
   fadingBetweenAreas: 0
   shopActive: 0
+  battleActive: 0
   itemsHeld:
   - Health Potion
   - Mana Potion

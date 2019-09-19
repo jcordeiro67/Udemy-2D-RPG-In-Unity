@@ -97,12 +97,18 @@ MonoBehaviour:
   movesAvailiable:
   - Fire
   - Ice
-  currentHP: 60
-  maxHP: 100
-  currentMP: 20
+  currentHP: 200
+  maxHP: 500
+  currentMP: 100
   maxMP: 100
   strength: 3
   defence: 1
   wpnPower: 1
   armrPower: 1
   hasDied: 0
+  shouldFade: 0
+  fadeSpeed: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
+  aliveSprite: {fileID: 21300068, guid: c64282cd9829e4774a062bf55f1000cf, type: 3}
+  deadSprite: {fileID: 21300098, guid: c64282cd9829e4774a062bf55f1000cf, type: 3}

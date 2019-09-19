@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityScript.Macros;
-using System.ComponentModel;
 
 public class Item : MonoBehaviour {
 
@@ -37,10 +35,15 @@ public class Item : MonoBehaviour {
 	public void UseItem(int charToUseOn) {
 
 		CharStats selectedChar = GameManager.instance.playerStats[charToUseOn];
+		BattleChar selectedBattleChar = BattleManager.instance.activeBattlers[charToUseOn];
+
 
 		if (isItem) {
 			if (affectHP) {
 				selectedChar.currentHP += amountToChange;
+				if (GameManager.instance.battleActive) {
+					selectedBattleChar.currentHP += amountToChange;
+				}
 				if (selectedChar.currentHP > selectedChar.maxHP) {
 					selectedChar.currentHP = selectedChar.maxHP;
 				}
@@ -48,6 +51,9 @@ public class Item : MonoBehaviour {
 
 			if (affectMP) {
 				selectedChar.currentMP += amountToChange;
+				if (GameManager.instance.battleActive) {
+					selectedBattleChar.currentMP += amountToChange;
+				}
 				if (selectedChar.currentMP > selectedChar.maxMP) {
 					selectedChar.currentMP = selectedChar.maxMP;
 				}
@@ -55,6 +61,16 @@ public class Item : MonoBehaviour {
 
 			if (affectStr) {
 				selectedChar.strength += amountToChange;
+				if (GameManager.instance.battleActive) {
+					selectedBattleChar.strength += amountToChange;
+				}
+			}
+
+			if (affectDef) {
+				selectedChar.defence += amountToChange;
+				if (GameManager.instance.battleActive) {
+					selectedBattleChar.defence += amountToChange;
+				}
 			}
 		}
 
