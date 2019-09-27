@@ -7122,6 +7122,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1483828279544843768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1483828279046408447, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_Name
+      value: Battle Zone_GreenDragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408435, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408432, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: shouldCompleteQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483828279046408432, guid: ff10990b3d7454a8c8b4ddfc79162d87,
+        type: 3}
+      propertyPath: questToComplete
+      value: Defeat Dragon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff10990b3d7454a8c8b4ddfc79162d87, type: 3}
 --- !u!1001 &7776323949803900684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7133,6 +7212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Battle Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776323949019068467, guid: baa018ef739ff41bd8c6cb59472a7358,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7776323949019068494, guid: baa018ef739ff41bd8c6cb59472a7358,
         type: 3}
@@ -7217,7 +7301,12 @@ PrefabInstance:
     - target: {fileID: 7776323949019068492, guid: baa018ef739ff41bd8c6cb59472a7358,
         type: 3}
       propertyPath: deactivateAfterStarting
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776323949019068492, guid: baa018ef739ff41bd8c6cb59472a7358,
+        type: 3}
+      propertyPath: timeBetweenBattles
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baa018ef739ff41bd8c6cb59472a7358, type: 3}

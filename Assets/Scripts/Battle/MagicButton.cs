@@ -10,16 +10,6 @@ public class MagicButton : MonoBehaviour {
 	public Text spellText;
 	public Text costText;
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-        
-    }
-
 	public void Press() {
 
 		if (BattleManager.instance.activeBattlers[BattleManager.instance.currentTrun].currentMP >= spellCost) {

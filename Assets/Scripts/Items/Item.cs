@@ -22,6 +22,8 @@ public class Item : MonoBehaviour {
 	public int weaponStrength;
 	public int armorStrength;
 
+
+	private BattleChar selectedBattleChar;
 	// Use this for initialization
 	void Start () {
 		
@@ -33,10 +35,12 @@ public class Item : MonoBehaviour {
 	}
 
 	public void UseItem(int charToUseOn) {
-
+		
 		CharStats selectedChar = GameManager.instance.playerStats[charToUseOn];
-		BattleChar selectedBattleChar = BattleManager.instance.activeBattlers[charToUseOn];
 
+		if (GameManager.instance.battleActive) {
+			selectedBattleChar = BattleManager.instance.activeBattlers[charToUseOn];
+		}
 
 		if (isItem) {
 			if (affectHP) {
@@ -83,7 +87,7 @@ public class Item : MonoBehaviour {
 		}
 
 		if (isArmor) {
-			if (selectedChar.equippedArmor!= "") {
+			if (selectedChar.equippedArmor != "") {
 				GameManager.instance.AddItem(selectedChar.equippedArmor);
 			}
 			selectedChar.equippedArmor = itemName;

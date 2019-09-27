@@ -13,24 +13,20 @@ public class BattleReward : MonoBehaviour {
 	public string[] rewardItems;
 	public int xpEarned;
 
+	public bool markQuestComplete;
+	public string questToMark;
+
     // Start is called before the first frame update
     void Start() {
 		instance = this;
 
     }
 
-    // Update is called once per frame
-    void Update() {
-		if (Input.GetKeyDown(KeyCode.Y)) {
-			OpenRewardScrene(100, new string[] {"Iron Sword", "Iron Armor"});
-		}
-    }
-
 	public void OpenRewardScrene(int xp, string[] rewards) {
 
 		xpEarned = xp;
 		rewardItems = rewards;
-
+		//TODO: Add Quest Complete Text to UI and here
 		xpText.text = "Everyone earned " + xpEarned + " xp!";
 		itemText.text = "";
 
@@ -57,5 +53,8 @@ public class BattleReward : MonoBehaviour {
 		rewardScrene.SetActive(false);
 		GameManager.instance.battleActive = false;
 
+		if (markQuestComplete) {
+			QuestManager.instance.MarkQuestComplete(questToMark);
+		}
 	}
 }

@@ -19,27 +19,7 @@ public class QuestManager : MonoBehaviour
     }
 
 	void Update() {
-
-		//TESTING AREA
-		if (Input.GetKeyDown(KeyCode.Q)) {
-			Debug.Log(CheckIfQuestComplete("Defeat Dragon"));
-
-			if (!CheckIfQuestComplete("Defeat Dragon")) {
-				MarkQuestComplete("Defeat Dragon");
-				MarkQuestIncomplete("Buy Mana Potion");
-			} else {
-				MarkQuestIncomplete("Defeat Dragon");
-				MarkQuestComplete("Buy Mana Potion");
-			}
-		}
-		if (Input.GetKeyDown(KeyCode.O)) {
-			SaveQuestData();
-		}
-
-		if (Input.GetKeyDown(KeyCode.P)) {
-			LoadQuestData();
-		}
-		//END TESTING AREA
+		
 	}
 
 	/// <summary>

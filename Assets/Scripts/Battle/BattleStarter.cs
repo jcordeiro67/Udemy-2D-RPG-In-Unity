@@ -12,6 +12,9 @@ public class BattleStarter : MonoBehaviour {
 	public bool deactivateAfterStarting;
 	private bool inArea;
 
+	public bool shouldCompleteQuest;
+	public string questToComplete;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -90,6 +93,9 @@ public class BattleStarter : MonoBehaviour {
 		if (deactivateAfterStarting == true) {
 			gameObject.SetActive(false);
 		}
+
+		BattleReward.instance.markQuestComplete = shouldCompleteQuest;
+		BattleReward.instance.questToMark = questToComplete;
 	}
 
 }

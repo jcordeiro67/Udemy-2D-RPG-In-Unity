@@ -62,11 +62,6 @@ public class BattleManager : MonoBehaviour {
 
     void Update() {
 		
-		//TESTING AREA
-		if (Input.GetKeyDown(KeyCode.T)) {
-			BattleStart(new string[] {"Troll", "Skeleton"} );
-		}
-		//END TESTING
 		if (battleActive) {
 			if (turnWaiting) {
 				if (activeBattlers[currentTrun].isPlayer) {
@@ -304,7 +299,7 @@ public class BattleManager : MonoBehaviour {
 	public void UpdateUIStats() {
 
 		for (int i = 0; i < playerNames.Length; i++) {
-			if (activeBattlers.Count > 1) {
+			if (activeBattlers.Count >= 1) { // Changed > To >=
 				if (activeBattlers[i].isPlayer) {
 					
 					BattleChar playerData = activeBattlers[i];
